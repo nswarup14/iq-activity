@@ -60,7 +60,9 @@ def init(): # called by run()
     frame2=utils.load_image('frame2.png',False)
     redrawn=False # used to make sure new puzzle thumbnail appears
     smiley=utils.load_image('smiley.png',True); smiley_c=(sx(27.5),sy(9))
-    print(frame2.get_rect())
+    temp = frame2.get_rect()
+    print(temp.centerx, temp.centery)
+
 def sx(f): # scale x function
     return int(f*factor+offset+.5)
 
