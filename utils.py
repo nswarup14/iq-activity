@@ -59,11 +59,14 @@ def load_image(file1,alpha=False,subdir=''): # eg subdir='glow'
     else:
         img=img.convert()
     if abs(g.imgf-1.0)>.1: # only scale if factor <> 1
+        if(file1 == 'frame2.png'):
+            print('HEy')
         w=img.get_width(); h=img.get_height()
         try:
             img=pygame.transform.smoothscale(img,(int(g.imgf*w),int(g.imgf*h)))
         except:
             img=pygame.transform.scale(img,(int(g.imgf*w),int(g.imgf*h)))
+    
     return img
                
 # eg new_list=copy_list(old_list)
