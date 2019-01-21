@@ -55,13 +55,6 @@ class IQ:
             for event in pygame.event.get(): flushing=True
 
     def run(self):
-        for event in pygame.event.get():
-            print(event)
-            if event.type == pygame.QUIT:
-                return
-            elif event.type == pygame.VIDEORESIZE:
-                pygame.display.set_mode(event.size, pygame.RESIZABLE)
-                break
         g.init()
         if not self.journal: utils.load()
         load_save.retrieve()
