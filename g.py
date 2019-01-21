@@ -31,12 +31,12 @@ def init(): # called by run()
     screen.fill((128,0,0))
     pygame.display.flip()
     w,h=screen.get_size()
-    print "screen size (%r, %r)" % (w, h)
     if float(w)/float(h)>1.5: #widescreen
         offset=(w-4*h/3)/2 # we assume 4:3 - centre on widescreen
     else:
         h=int(.75*w) # allow for toolbar - works to 4:3
         offset=0
+    print "screen size (%r, %r)" % (w, h)
     factor=float(h)/24 # measurement scaling factor (32x24 = design units)
     imgf=float(h)/900 # image scaling factor - all images built for 1200x900
     clock=pygame.time.Clock()
