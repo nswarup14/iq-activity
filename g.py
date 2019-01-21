@@ -31,6 +31,7 @@ def init(): # called by run()
     screen.fill((128,0,0))
     pygame.display.flip()
     w,h=screen.get_size()
+    print(w,h)
     if float(w)/float(h)>1.5: #widescreen
         offset=(w-4*h/3)/2 # we assume 4:3 - centre on widescreen
     else:
