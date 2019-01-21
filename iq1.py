@@ -66,6 +66,7 @@ def setup():
 def draw():
     x,y=tns[0].xy; dx=g.sy(.5); dy=g.sy(.45)
     x-=dx; y-=dy; g.screen.blit(g.frame2,(x,y))
+    print "blit frame2 at (%r, %r)" % (x, y)
     n=g.solved+1
     if n==11: n=10
     for ind in range(n):
