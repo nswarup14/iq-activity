@@ -59,6 +59,7 @@ class IQ:
             if event.type == pygame.QUIT:
                 return
             elif event.type == pygame.VIDEORESIZE:
+                print(event.size)
                 pygame.display.set_mode(event.size, pygame.RESIZABLE)
                 break
         g.init()
